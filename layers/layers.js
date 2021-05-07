@@ -1,4 +1,4 @@
-ol.proj.get("EPSG:4326").setExtent([-90.886529, -18.434220, -59.065530, 1.262282]);
+ol.proj.get("EPSG:4326").setExtent([-92.065115, -18.838721, -58.318119, 1.357082]);
 var wms_layers = [];
 var baseLayer = new ol.layer.Group({
     'title': '',
