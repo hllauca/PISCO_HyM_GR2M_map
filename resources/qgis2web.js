@@ -88,9 +88,9 @@ var map = new ol.Map({
     overlays: [overlayPopup],
     layers: layersList,
     view: new ol.View({
-        extent: [-93.637186, -19.031404, -56.513017, 1.437579], maxZoom: 28, minZoom: 1, projection: new ol.proj.Projection({
+        extent: [-90.886529, -18.434220, -59.065530, 1.262282], maxZoom: 28, minZoom: 1, projection: new ol.proj.Projection({
             code: 'EPSG:4326',
-            extent: [-81.321897, -18.379427, -68.529172, 1.320075],
+            extent: [-20037508.342789, -20037508.342789, 20037508.342789, 20037508.342789],
             units: 'degrees'})
     })
 });
@@ -99,7 +99,7 @@ var layerSwitcher = new ol.control.LayerSwitcher({tipLabel: "Layers"});
 map.addControl(layerSwitcher);
 
     var searchLayer = new ol.SearchLayer({
-      layer: lyr_Subcuencas_1,
+      layer: lyr_Subcuencas_2,
       colName: 'COMID',
       zoom: 10,
       collapsed: true,
@@ -107,7 +107,7 @@ map.addControl(layerSwitcher);
     });
 
     map.addControl(searchLayer);
-map.getView().fit([-93.637186, -19.031404, -56.513017, 1.437579], map.getSize());
+map.getView().fit([-90.886529, -18.434220, -59.065530, 1.262282], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
@@ -147,7 +147,7 @@ var featureOverlay = new ol.layer.Vector({
     updateWhileInteracting: true // optional, for instant visual feedback
 });
 
-var doHighlight = false;
+var doHighlight = true;
 var doHover = true;
 
 var highlight;
