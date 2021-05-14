@@ -256,9 +256,9 @@ var onPointerMove = function(evt) {
                     highlightStyle = new ol.style.Style({
                         image: new ol.style.Circle({
                             fill: new ol.style.Fill({
-                                color: "#ffff00"
+                                color: "rgba(255,51,51,1)"
                             }),
-                            radius: radius
+                            radius: 6
                         })
                     })
                 } else if (currentFeature.getGeometry().getType() == 'LineString') {
@@ -267,16 +267,22 @@ var onPointerMove = function(evt) {
 
                     highlightStyle = new ol.style.Style({
                         stroke: new ol.style.Stroke({
-                            color: '#ffff00',
+                            color: "rgba(255,51,51,1)",
                             lineDash: null,
-                            width: featureWidth
+                            width: 3
                         })
                     });
 
                 } else {
                     highlightStyle = new ol.style.Style({
                         fill: new ol.style.Fill({
-                            color: '#ffff00'
+                            color: "rgba(255,51,51,0.3)",
+                            width: 3
+                        }),
+						stroke: new ol.style.Stroke({
+                            color: "rgba(255,51,51,1)",
+                            lineDash: null,
+                            width: 3
                         })
                     })
                 }
